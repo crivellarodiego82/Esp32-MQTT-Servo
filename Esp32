@@ -4,8 +4,8 @@
 Servo ObjServo; //Oggetto Servo
 
 // Parametri WiFi
-const char* ssid     = "Casa_WiFi_2g";
-const char* password = "P@ssw0rd@2020";
+const char* ssid     = "---------";
+const char* password = "---------";
 
 // Porta Web Server
 WiFiServer server(80);
