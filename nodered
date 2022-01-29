@@ -1,0 +1,492 @@
+[
+    {
+        "id": "e969b86db120b7c5",
+        "type": "tab",
+        "label": "Esp32 Http Get Multipli",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b59caadbb09ebe3f",
+        "type": "ui_slider",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "label": "Servo A",
+        "tooltip": "",
+        "group": "abd602cc.8182d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "63",
+        "step": "0",
+        "className": "",
+        "x": 220,
+        "y": 40,
+        "wires": [
+            [
+                "2f429393f892acaf",
+                "28339d54c1835d14"
+            ]
+        ]
+    },
+    {
+        "id": "2f429393f892acaf",
+        "type": "http request",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://10.0.2.44/?valueA={{payload}}&",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 390,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2eb68bcd965f5b43",
+        "type": "comment",
+        "z": "e969b86db120b7c5",
+        "name": "Comando Get",
+        "info": "(0-180 gradi) --> (7-63)\n\n10.0.2.44/?valueA=(7-63)&\n10.0.2.44/?valueB=(7-63)&\n10.0.2.44/?valueC=(7-63)&\n10.0.2.44/?valueD=(7-63)&",
+        "x": 610,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "72f25583a49fadd8",
+        "type": "ui_slider",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "label": "Servo B",
+        "tooltip": "",
+        "group": "db47e446e5562ecc",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "63",
+        "step": "0",
+        "className": "",
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "64f536ac32ed32cc",
+                "2cb2522d6399d919"
+            ]
+        ]
+    },
+    {
+        "id": "64f536ac32ed32cc",
+        "type": "http request",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://10.0.2.44/?valueB={{payload}}&",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 390,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f9eb397d00fd527",
+        "type": "ui_slider",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "label": "Servo C",
+        "tooltip": "",
+        "group": "405f55b86a8f106f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "63",
+        "step": "0",
+        "className": "",
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "ba04ffcf449ea01c",
+                "40fdf67f026bef68"
+            ]
+        ]
+    },
+    {
+        "id": "ba04ffcf449ea01c",
+        "type": "http request",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://10.0.2.44/?valueC={{payload}}&",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 390,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5685902c682f9b28",
+        "type": "ui_slider",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "label": "Servo D",
+        "tooltip": "",
+        "group": "1d7ac619ceeb36b2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "63",
+        "step": "0",
+        "className": "",
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "6b5c1ca6b3363714",
+                "8a8be29a96ae8aa2"
+            ]
+        ]
+    },
+    {
+        "id": "6b5c1ca6b3363714",
+        "type": "http request",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://10.0.2.44/?valueD={{payload}}&",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 390,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f195ee1bdce746d",
+        "type": "inject",
+        "z": "e969b86db120b7c5",
+        "name": "0",
+        "props": [
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "b59caadbb09ebe3f"
+            ]
+        ]
+    },
+    {
+        "id": "e966eea66c76b396",
+        "type": "inject",
+        "z": "e969b86db120b7c5",
+        "name": "0",
+        "props": [
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "72f25583a49fadd8"
+            ]
+        ]
+    },
+    {
+        "id": "bc54496443dda083",
+        "type": "inject",
+        "z": "e969b86db120b7c5",
+        "name": "0",
+        "props": [
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "1f9eb397d00fd527"
+            ]
+        ]
+    },
+    {
+        "id": "351ad730c46a7d14",
+        "type": "inject",
+        "z": "e969b86db120b7c5",
+        "name": "0",
+        "props": [
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "5685902c682f9b28"
+            ]
+        ]
+    },
+    {
+        "id": "28339d54c1835d14",
+        "type": "ui_gauge",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "group": "abd602cc.8182d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Servo A",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "7",
+        "max": "63",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2cb2522d6399d919",
+        "type": "ui_gauge",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "group": "db47e446e5562ecc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Servo B",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "7",
+        "max": "63",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "40fdf67f026bef68",
+        "type": "ui_gauge",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "group": "405f55b86a8f106f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Servo C",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "7",
+        "max": "63",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8a8be29a96ae8aa2",
+        "type": "ui_gauge",
+        "z": "e969b86db120b7c5",
+        "name": "",
+        "group": "1d7ac619ceeb36b2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Servo D",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "7",
+        "max": "63",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "5291cc6e6cd2c4d9",
+        "type": "comment",
+        "z": "e969b86db120b7c5",
+        "name": "INO Esp_IDF",
+        "info": "#include <WiFi.h>\n#include <Servo.h>\n\nServo ObjServo; //Oggetto Servo\n\n// Parametri WiFi\nconst char* ssid     = \"Casa_WiFi_2g\";\nconst char* password = \"P@ssw0rd@2020\";\n\n// Porta Web Server\nWiFiServer server(80);\n\n// Variabile HTTP\nString header;\n\n// Variabile settaggio valori\nString valueString = String(5);\nint pos1 = 0;\nint pos2 = 0;\n\n//Servo_pin\nconst int ServoA = 13;\nconst int ServoB = 14;\nconst int ServoC = 15;\nconst int ServoD = 16;\n\nvoid setup() {\n\n  \n  //ledc setting\n  //ServoA\n  ledcSetup(0, 90, 8);\n  // ServoA\n  ledcAttachPin(ServoA, 0);\n\n  //ServoB\n  ledcSetup(1, 90, 8);\n\n  // ServoB\n  ledcAttachPin(ServoB, 1);\n\n  //ServoC\n  ledcSetup(2, 90, 8);\n\n  // ServoC\n  ledcAttachPin(ServoC, 2);\n\n  //ServoD\n  ledcSetup(3, 90, 8);\n\n  // ServoD\n  ledcAttachPin(ServoD, 3);\n\n\n  Serial.begin(115200);\n\n  // Connetto al Wifi\n  Serial.print(\"Connesso a : \");\n  Serial.println(ssid);\n  WiFi.begin(ssid, password);\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(500);\n    Serial.print(\".\");\n  }\n  // Stampo parametri connessione\n  Serial.println(\"\");\n  Serial.println(\"WiFi connesso.\");\n  Serial.println(\"Indirizzo IP : \");\n  Serial.println(WiFi.localIP());\n  server.begin();\n}\n\nvoid loop() {\n  WiFiClient client = server.available();   // Attendo Client\n\n  if (client) {                             // Se client connesso,\n    Serial.println(\"New Client.\");          // riporto in porta seriale\n    String currentLine = \"\";                // creo Stringa e attendo dati\n    while (client.connected()) {            // creo loop per client\n      if (client.available()) {             // \n        char c = client.read();             // \n        Serial.write(c);                    // riporto in porta seriale\n        header += c;\n        if (c == '\\n') {                    // \n          // \n          // \n          if (currentLine.length() == 0) {\n            // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)\n            // and a content-type so the client knows what's coming, then a blank line:\n            client.println(\"HTTP/1.1 200 OK\");\n            client.println(\"Content-type:text/html\");\n            client.println(\"Connection: close\");\n            client.println();\n\n            // Display the HTML web page\n            client.println(\"<!DOCTYPE html><html>\");\n            client.println(\"<head><meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\"><title>Crivellaro ESP32 Servo</title>\");\n            client.println(\"<link rel=\\\"icon\\\" href=\\\"data:,\\\">\");\n            // CSS to style the on/off buttons\n            // Feel free to change the background-color and font-size attributes to fit your preferences\n            client.println(\"<style>body { text-align: center; font-family: \\\"Trebuchet MS\\\", Arial; margin-left:auto; margin-right:auto;}\");\n            client.println(\"#servoPosR{color: red;}\");\n            client.println(\"#servoPosG{color: green;}\");\n            client.println(\"#servoPosB{color: blue;}\");\n            client.println(\".slider { width: 300px; }</style>\");\n            client.println(\"<script src=\\\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\\\"></script>\");\n\n// 9 - 58 (0 a 180 gradi)\n\n\n            // Web Page\n            client.println(\"</head><body><h1>ESP32 Multi Servo</h1>\");\n            //ServoA slide bar\n            client.println(\"<p>Servo PosA: <span id=\\\"servoPosA\\\"></span></p>\");\n            client.println(\"<input type=\\\"range\\\" min=\\\"7\\\" max=\\\"63\\\" class=\\\"slider\\\" id=\\\"servoSliderA\\\" onchange=\\\"servo(this.value,'A')\\\" value=\\\"\" + valueString + \"\\\"/>\");\n            //ServoB slide bar\n            client.println(\"<p>Servo PosB: <span id=\\\"servoPosB\\\"></span></p>\");\n            client.println(\"<input type=\\\"range\\\" min=\\\"7\\\" max=\\\"63\\\" class=\\\"slider\\\" id=\\\"servoSliderB\\\" onchange=\\\"servo(this.value,'B')\\\" value=\\\"\" + valueString + \"\\\"/>\");\n            //ServoC slide bar\n            client.println(\"<p>Servo PosC: <span id=\\\"servoPosC\\\"></span></p>\");\n            client.println(\"<input type=\\\"range\\\" min=\\\"7\\\" max=\\\"63\\\" class=\\\"slider\\\" id=\\\"servoSliderC\\\" onchange=\\\"servo(this.value,'C')\\\" value=\\\"\" + valueString + \"\\\"/>\");\n            //ServoD slide bar\n            client.println(\"<p>Servo PosD: <span id=\\\"servoPosD\\\"></span></p>\");\n            client.println(\"<input type=\\\"range\\\" min=\\\"7\\\" max=\\\"63\\\" class=\\\"slider\\\" id=\\\"servoSliderD\\\" onchange=\\\"servo(this.value,'D')\\\" value=\\\"\" + valueString + \"\\\"/>\");\n\n\n            client.println(\"<script>\");\n            //send A value\n            client.println(\"var sliderA = document.getElementById(\\\"servoSliderA\\\");\");\n            client.println(\"var servoPA = document.getElementById(\\\"servoPosA\\\"); servoPA.innerHTML = sliderA.value;\");\n            client.println(\"sliderA.oninput = function() { sliderA.value = this.value; servoPA.innerHTML = this.value; }\");\n\n            //send B value\n            client.println(\"var sliderB = document.getElementById(\\\"servoSliderB\\\");\");\n            client.println(\"var servoPB = document.getElementById(\\\"servoPosB\\\"); servoPB.innerHTML = sliderB.value;\");\n            client.println(\"sliderB.oninput = function() { sliderB.value = this.value; servoPB.innerHTML = this.value; }\");\n\n            //send C value\n            client.println(\"var sliderC = document.getElementById(\\\"servoSliderC\\\");\");\n            client.println(\"var servoPC = document.getElementById(\\\"servoPosC\\\"); servoPC.innerHTML = sliderC.value;\");\n            client.println(\"sliderC.oninput = function() { sliderC.value = this.value; servoPC.innerHTML = this.value; }\");\n\n            //send D value\n            client.println(\"var sliderD = document.getElementById(\\\"servoSliderD\\\");\");\n            client.println(\"var servoPD = document.getElementById(\\\"servoPosD\\\"); servoPD.innerHTML = sliderD.value;\");\n            client.println(\"sliderD.oninput = function() { sliderD.value = this.value; servoPD.innerHTML = this.value; }\");\n\n            //HTTP get\n            client.println(\"$.ajaxSetup({timeout:1000}); function servo(pos,color) { \");\n            client.println(\"$.get(\\\"/?value\\\" + color + \\\"=\\\" + pos + \\\"&\\\"); {Connection: close};}</script>\");\n\n            client.println(\"</body></html>\");\n\n            //HTTP\n            //GET /?value=180& HTTP/1.1\n\n            //ServoA\n            if (header.indexOf(\"GET /?valueA=\") >= 0) {\n              pos1 = header.indexOf('=');\n              pos2 = header.indexOf('&');\n              valueString = header.substring(pos1 + 1, pos2);\n\n              //Servo valueString\n              ledcWrite(0, valueString.toInt());\n              Serial.println(valueString);\n            }\n\n            //ServoB\n            if (header.indexOf(\"GET /?valueB=\") >= 0) {\n              pos1 = header.indexOf('=');\n              pos2 = header.indexOf('&');\n              valueString = header.substring(pos1 + 1, pos2);\n\n\n              //Servo valueString\n              ledcWrite(1, valueString.toInt());\n              Serial.println(valueString);\n            }\n\n            //ServoC\n            if (header.indexOf(\"GET /?valueC=\") >= 0) {\n              pos1 = header.indexOf('=');\n              pos2 = header.indexOf('&');\n              valueString = header.substring(pos1 + 1, pos2);\n\n\n              //Servo valueString\n//              ledcWrite(2, valueString.toInt());\n //             Serial.println(valueString);\n            }\n\n            //ServoD\n            if (header.indexOf(\"GET /?valueD=\") >= 0) {\n              pos1 = header.indexOf('=');\n              pos2 = header.indexOf('&');\n              valueString = header.substring(pos1 + 1, pos2);\n\n\n              //Servo valueString\n//              ledcWrite(3, valueString.toInt());\n//              Serial.println(valueString);\n            }\n\n            // HTTP\n            client.println();\n            // Break out of the while loop\n            break;\n          } else {\n            currentLine = \"\";\n          }\n        } else if (c != '\\r') {\n          currentLine += c;\n        }\n      }\n    }\n    // Clear the header variable\n    header = \"\";\n    // \n    client.stop();\n    Serial.println(\"Client disconnected.\");\n    Serial.println(\"\");\n  }\n}",
+        "x": 770,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f89fab766e5127db",
+        "type": "comment",
+        "z": "e969b86db120b7c5",
+        "name": "Esp Pin",
+        "info": "ServoA = 13\nServoB = 14\nServoC = 15\nServoD = 16",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "abd602cc.8182d",
+        "type": "ui_group",
+        "name": "Servo_01",
+        "tab": "ce91b9cba635a5d5",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db47e446e5562ecc",
+        "type": "ui_group",
+        "name": "B",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "405f55b86a8f106f",
+        "type": "ui_group",
+        "name": "C",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d7ac619ceeb36b2",
+        "type": "ui_group",
+        "name": "D",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce91b9cba635a5d5",
+        "type": "ui_tab",
+        "name": "Servo_MQTT",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
